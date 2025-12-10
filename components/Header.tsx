@@ -5,8 +5,8 @@ import { Icons } from './Icons';
 
 export const Header: React.FC = () => {
   return (
-    <header className="py-16 md:py-24 text-center px-4 max-w-5xl mx-auto">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
+    <header className="pt-16 pb-8 md:pt-24 md:pb-12 text-center px-4 max-w-5xl mx-auto">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mb-6">
         {PAPER_TITLE}
       </h1>
       {/* <p className="text-xl md:text-2xl text-slate-600 mb-8 font-medium">

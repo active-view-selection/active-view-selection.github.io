@@ -4,7 +4,7 @@ import { Figure } from './Figure';
 export const Method: React.FC = () => {
   return (
     <section className="py-12">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-slate-900">Visually-Grounded Active View Selection (VG-AVS)</h2>
 
         <p className="text-lg text-slate-700 mb-8 leading-relaxed">
@@ -42,7 +42,7 @@ export const Method: React.FC = () => {
         </div>
 
         <Figure
-          src="/figures/method_overview.png"
+          src="./figures/method_overview.png"
           alt="Training Pipeline"
           caption={
             <span>

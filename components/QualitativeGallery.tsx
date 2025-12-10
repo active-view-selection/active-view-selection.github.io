@@ -56,8 +56,8 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
     setCurrentIndex((prev) => (prev - 1 + filteredData.length) % filteredData.length);
   };
 
-  const datasetLabel = dataset === 'ProcTHOR' ? 'Synthetic Scenes (ProcTHOR)' : 'Real-World Scenes (HM3D)';
-  const datasetColor = dataset === 'ProcTHOR' ? 'blue' : 'green';
+  const datasetLabel = dataset === 'ProcTHOR' ? 'Synthetic Scenes (ProcTHOR)' : 'Real-World Scenes (Habitat Matterport)';
+  const datasetColor = dataset === 'ProcTHOR' ? 'green' : 'green';
 
   const parsedActions = currentItem ? parseAction(currentItem.action) : null;
 
@@ -66,9 +66,6 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
       {/* Gallery Header */}
       <div className={`p-4 border-b border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 bg-${datasetColor}-50/30`}>
         <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-lg bg-${datasetColor}-100 text-${datasetColor}-700`}>
-            {dataset === 'ProcTHOR' ? <Icons.Data /> : <Icons.Video />}
-          </div>
           <h3 className="font-bold text-lg text-slate-800">{datasetLabel}</h3>
         </div>
 

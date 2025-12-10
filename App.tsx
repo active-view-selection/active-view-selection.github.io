@@ -50,8 +50,8 @@ const App: React.FC = () => {
         <section className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6 text-slate-900">Qualitative Examples</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Explore how our model reasons about the scene and predicts precise movement actions to answer questions.
+            <p className="text-lg text-slate-700 max-w-5xl mx-auto">
+              Explore how our model reasons about the scene and predicts precise movement actions using <span className="text-blue-600 bg-blue-50 px-1 rounded font-bold">visual cues</span> to answer questions.
             </p>
           </div>
 
@@ -76,15 +76,12 @@ const App: React.FC = () => {
 
         <hr className="border-slate-100 max-w-xl mx-auto" />
 
-        {/* Methodology */}
-        <Method />
-
         {/* Quantitative Results Section */}
         <section className="max-w-5xl mx-auto scroll-mt-24" id="results">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900">Quantitative Results</h2>
-            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-              Our SFT+RL framework consistently outperforms baselines across diverse question types on both synthetic (ProcTHOR) and real-world (HM3D) benchmarks.
+            <h2 className="text-3xl font-bold mb-6 text-slate-900">Quantitative Results</h2>
+            <p className="text-lg text-slate-700 max-w-5xl mx-auto">
+              Our VG-AVS framework consistently outperforms baselines across diverse question types on both synthetic (ProcTHOR) and real-world (Habitat Matterport) benchmarks, significantly surpassing proprietary models such as <span className="font-bold text-slate-900">GPT-5</span> and <span className="font-bold text-slate-900">Gemini 2.5 Pro</span>.
             </p>
           </div>
 
@@ -101,6 +98,9 @@ const App: React.FC = () => {
             <MainResultsTable />
           </div>
         </section>
+
+        {/* Methodology */}
+        <Method />
 
         <BibTeX />
 

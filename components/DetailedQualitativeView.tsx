@@ -1,21 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Icons } from './Icons';
 import { Button } from './Button';
 import { Figure } from './Figure';
 
-interface DetailedQualitativeViewProps {
-  onBack: () => void;
-}
-
-export const DetailedQualitativeView: React.FC<DetailedQualitativeViewProps> = ({ onBack }) => {
+export const DetailedQualitativeView: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200 px-4 py-4">
         <div className="container mx-auto max-w-6xl flex items-center justify-between">
-          <Button onClick={onBack} variant="outline" icon={<Icons.ArrowLeft />}>
-            Back to Project Page
-          </Button>
+          <Link to="/">
+            <Button variant="outline" icon={<Icons.ArrowLeft />}>
+              Back to Project Page
+            </Button>
+          </Link>
           <h2 className="text-lg font-bold text-slate-900 hidden md:block">
             Extended Qualitative Results
           </h2>
@@ -30,7 +29,7 @@ export const DetailedQualitativeView: React.FC<DetailedQualitativeViewProps> = (
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Comparison with Baselines</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Visualizing how our SFT+RL framework (right) compares to EQA baselines and supervised-only methods (middle) in recovering visual information.
+              Visualizing how our AVS framework (right) compares to EQA baselines and supervised-only methods (middle) in recovering visual information.
             </p>
           </div>
 
@@ -67,8 +66,8 @@ export const DetailedQualitativeView: React.FC<DetailedQualitativeViewProps> = (
               caption={
                 <span>
                   <strong>Figure 6.</strong> Illustration of integrating our AVS framework into an EQA pipeline.
-                  The yellow line represents exploration. The <span className="text-blue-600">blue arrow</span> represents the final viewpoint refinement by our model.
-                  Standard EQA often stops with the target partially occluded; our model minimally adjusts to reveal it.
+                  The yellow line represents the initial exploration where sufficient information is not available for agent to answer the question. The <span className="text-blue-600">blue arrow</span> represents the final viewpoint refinement by our model.
+                  Standard EQA (Fine-EQA) often stops with the target partially occluded; our model minimally adjusts to reveal it.
                 </span>
               }
             />

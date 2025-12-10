@@ -3,7 +3,7 @@ import { QualitativeExample, TableRow } from './types';
 export const PAPER_TITLE = "Toward Ambulatory Vision: Learning Visually-Grounded Active View Selection";
 export const CONFERENCE = "CVPR 2026 Submission #91";
 
-export const TLDR_TEXT = "We introduce Visually Grounded Active View Selection Framework (VG-AVS), enabling embodied agents to actively adjust their viewpoint for better Visual Question Answering using only current visual cues, achieving state-of-the-art performance on synthetic and real-world benchmarks.";
+export const TLDR_TEXT = "We introduce Visually Grounded Active View Selection (VG-AVS) Framework, enabling embodied agents to actively adjust their viewpoint for better Visual Question Answering using only current visual cues, achieving state-of-the-art performance on synthetic and real-world benchmarks.";
 
 export const ABSTRACT_TEXT = `
 Vision Language Models (VLMs) excel at visual question answering (VQA) but remain limited to snapshot vision, reasoning from static images. In contrast, embodied agents require ambulatory vision, actively moving to obtain more informative views. We introduce Visually Grounded Active View Selection (VG-AVS), a task that selects the most informative next viewpoint using only the visual information in the current image, without relying on scene memory or external knowledge. To support this task, we construct a synthetic dataset with automatically generated paired query–target views and question–answer prompts. We also propose a framework that fine-tunes pretrained VLMs through supervised fine-tuning (SFT) followed by RL-based policy optimization. Our approach achieves strong question answering performance based on viewpoint selection and generalizes robustly to unseen synthetic and real scenes. Furthermore, incorporating our learned VG-AVS framework into existing scene-exploration-based EQA systems improves downstream question-answering accuracy.
@@ -156,7 +156,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-exist-1',
     dataset: 'HM3D',
     category: 'Existence',
-    question: "Is there a **vase** on the **dining table** for the flowers?",
+    question: "Is there a vase on the **dining table** for the flowers?",
     think: "The table on the right side of the image is the dining table. The table is not fully visible, but the top right corner of the image shows part of it. To see the table, I need to turn to the right and move forward. ",
     action: "<head>94</head> <fwd>75</fwd> <view>-51</view>",
     imageAlt: "Real world dining table vase",
@@ -178,7 +178,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-attr-1',
     dataset: 'HM3D',
     category: 'Attribute',
-    question: "Can you describe the hue of the **sizable pot** situated adjacent to the **entrance**?",
+    question: "Can you describe the hue of the sizable pot situated adjacent to the **entrance**?",
     think: "The sizable pot is located at the entrance, which is on the right side. To see it, I need to turn to the right and move towards the door.",
     action: "<head>64</head> <fwd>79</fwd> <view>-35</view>",
     imageAlt: "Real world pot hue",
@@ -189,7 +189,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-exist-2',
     dataset: 'HM3D',
     category: 'Existence',
-    question: "Are there any **suit jackets** hanging in the **closet**?",
+    question: "Are there any suit jackets hanging in the **closet**?",
     think: "The closet is on the right side, so I need to turn right and walk forward to get there.",
     action: "<head>46</head> <fwd>127</fwd> <view>-17</view>",
     imageAlt: "Real world closet check",
@@ -200,7 +200,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-count-1',
     dataset: 'HM3D',
     category: 'Counting',
-    question: "How many **decorative items** are hanging from the door handle next to the **stairs**?",
+    question: "How many decorative items are hanging from the door handle next to the **stairs**?",
     think: "The door on the right side of the image is the one next to the stairs. I need to move towards it to see if there are any decorative items hanging from the door handle.",
     action: "<head>64</head> <fwd>125</fwd> <view>-42</view>",
     imageAlt: "Real world decorative items",
@@ -211,7 +211,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-count-2',
     dataset: 'HM3D',
     category: 'Counting',
-    question: "How many **framed pictures** are hanging on the wall near the **piano**?",
+    question: "How many framed pictures are hanging on the wall near the **piano**?",
     think: "The framed picture is on the wall behind the piano. I need to move towards the piano to see it clearly.",
     action: "<head>-64</head> <fwd>145</fwd> <view>33</view>",
     imageAlt: "Real world framed pictures",
@@ -222,7 +222,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-count-3',
     dataset: 'HM3D',
     category: 'Counting',
-    question: "If I have six guests for dinner, how many **chairs** are available at the **dining table**?",
+    question: "If I have six guests for dinner, how many chairs are available at the **dining table**?",
     think: "The dining table is located towards the right side of the room, and there are chairs visible on both sides of it. To see the entire table and the chairs, I need to move towards the right. ",
     action: "<head>67</head> <fwd>125</fwd> <view>-29</view>",
     imageAlt: "Real world dining chairs",
@@ -244,7 +244,7 @@ export const QUALITATIVE_DATA: QualitativeExample[] = [
     id: 'hm-attr-3',
     dataset: 'HM3D',
     category: 'Attribute',
-    question: "What is the color of the **lamp shade** next to the **plant**?",
+    question: "What is the color of the lamp shade next to the **plant**?",
     think: "The plant is located on the far right side of the room, which is currently out of view. To see it, I need to turn right and move forward. This will allow me to see the plant and its lamp shade. ",
     action: "<head>67</head> <fwd>125</fwd> <view>-24</view>",
     imageAlt: "Real world lamp shade color",

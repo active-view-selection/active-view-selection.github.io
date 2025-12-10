@@ -20,7 +20,7 @@ export const HomePage: React.FC = () => {
             <main className="container mx-auto px-4 pb-20 space-y-24">
 
                 {/* Teaser Image */}
-                <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100 mb-12">
+                <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100 mb-12 p-3">
                     <img
                         src="./figures/teaser.png"
                         alt="Teaser"

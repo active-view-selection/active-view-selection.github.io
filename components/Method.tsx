@@ -46,7 +46,7 @@ export const Method: React.FC = () => {
           alt="Training Pipeline"
           caption={
             <span>
-              Overview of training strategies. (Top) SFT trains the model to predict ground-truth actions. (Bottom) RL allows the model to explore and is rewarded when the final view enables a frozen VLM verifier to correctly answer the question.
+              Overview of training strategies.
             </span>
           }
         />

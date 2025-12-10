@@ -13,8 +13,8 @@ export const BibTeX: React.FC = () => {
   return (
     <section className="bg-slate-900 text-slate-300 py-12 px-4 rounded-xl max-w-4xl mx-auto my-16 relative">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-white">BibTeX</h2>
-        <button 
+        <h2 className="text-xl font-bold text-white font-google-sans">BibTeX</h2>
+        <button
           onClick={handleCopy}
           className="text-xs uppercase tracking-wider font-semibold hover:text-white transition-colors"
         >

@@ -66,7 +66,7 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
       {/* Gallery Header */}
       <div className={`p-4 border-b border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 bg-${datasetColor}-50/30`}>
         <div className="flex items-center gap-3">
-          <h3 className="font-bold text-lg text-slate-800">{datasetLabel}</h3>
+          <h3 className="font-bold text-lg text-slate-800 font-google-sans">{datasetLabel}</h3>
         </div>
 
         {/* Category Tabs */}
@@ -75,7 +75,7 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
             <button
               key={cat}
               onClick={() => handleCategoryChange(cat as any)}
-              className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide transition-all ${activeCategory === cat
+              className={`px-3 py-1 rounded-full text-xs uppercase tracking-wide transition-all ${activeCategory === cat
                 ? `bg-slate-800 text-white shadow-md`
                 : 'text-slate-500 hover:bg-slate-200 hover:text-slate-800'
                 }`}
@@ -94,7 +94,7 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
             {/* Header: Question & Nav */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-slate-900 leading-tight whitespace-pre-line">
+                <h3 className="text-xl font-bold text-slate-900 leading-tight whitespace-pre-line font-google-sans">
                   <span className="text-slate-400 mr-2">Q:</span>
                   {currentItem.question.split(/(\*\*.*?\*\*)/).map((part, index) => {
                     if (part.startsWith('**') && part.endsWith('**')) {
@@ -138,7 +138,7 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
                   alt={`Initial view for ${currentItem.imageAlt}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur text-white text-xs font-semibold px-2 py-1 rounded shadow-sm">
+                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur text-white text-xs px-2 py-1 rounded shadow-sm">
                   Query View
                 </div>
               </div>
@@ -148,7 +148,7 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
                   alt={`Refined view for ${currentItem.imageAlt}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className={`absolute top-3 left-3 bg-${datasetColor}-600/90 backdrop-blur text-white text-xs font-semibold px-2 py-1 rounded shadow-sm`}>
+                <div className={`absolute top-3 left-3 bg-${datasetColor}-600/90 backdrop-blur text-white text-xs px-2 py-1 rounded shadow-sm`}>
                   Target View
                 </div>
               </div>
@@ -158,11 +158,11 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
             <div className="space-y-4">
               {/* Thinking Block */}
               <div className="bg-slate-50 border border-slate-100 rounded-xl p-5 relative">
-                <div className="flex items-center gap-2 text-slate-600 font-bold mb-2 text-xs uppercase tracking-wide">
+                <div className="flex items-center gap-2 text-slate-600 mb-2 text-xs uppercase tracking-wide">
                   <Icons.Brain />
                   Internal Reasoning
                 </div>
-                <p className="text-slate-800 leading-relaxed italic text-base md:text-lg">
+                <p className="text-slate-800 leading-relaxed italic text-sm md:text-base">
                   <span className="text-slate-400 font-mono text-xs not-italic mr-2 select-none">&lt;think&gt;</span>
                   {currentItem.think}
                   <span className="text-slate-400 font-mono text-xs not-italic ml-2 select-none">&lt;/think&gt;</span>
@@ -170,23 +170,23 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
               </div>
 
               {/* Action Block */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 font-mono text-sm text-slate-600 shadow-sm overflow-x-auto">
-                <div className="flex items-center gap-2 text-slate-500 font-bold mb-2 text-xs uppercase tracking-wide border-b border-slate-200 pb-2">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 text-sm text-slate-600 shadow-sm overflow-x-auto">
+                <div className="flex items-center gap-2 text-slate-600 mb-2 text-xs uppercase tracking-wide border-b border-slate-200 pb-2">
                   <Icons.Footprints />
                   Executed Action
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <span className="text-slate-500 text-xs font-bold block mb-1">Raw Output:</span>
-                    <div className="bg-white p-3 rounded border border-slate-200 text-slate-700 break-all text-xs md:text-sm shadow-sm">
+                    <span className="text-slate-500 text-xs block mb-1">Raw Output:</span>
+                    <div className="bg-white p-3 rounded border border-slate-200 text-slate-700 break-all text-xs md:text-sm shadow-sm font-mono">
                       {currentItem.action}
                     </div>
                   </div>
 
                   {parsedActions && (
                     <div>
-                      <span className="text-slate-500 text-xs font-bold block mb-1">Parsed Action:</span>
+                      <span className="text-slate-500 text-xs block mb-1">Parsed Action:</span>
                       <div className="bg-white p-3 rounded border border-slate-200 shadow-sm">
                         <ul className="text-slate-700 space-y-1 text-xs md:text-sm">
                           {parsedActions.map((line, i) => (

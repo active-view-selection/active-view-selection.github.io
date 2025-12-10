@@ -13,8 +13,12 @@ export const Header: React.FC = () => {
         {CONFERENCE}
       </p> */}
 
-      <div className="text-slate-600 text-lg mb-2">
-        Juil Koo*, Daehyeon Choi*, Sangwoo Youn*, Phillip Y. Lee, Minhyuk Sung
+      <div className="text-lg mb-2">
+        <a href="https://63days.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Juil Koo</a>*,{' '}
+        <a href="https://choidaedae.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Daehyeon Choi</a>*,{' '}
+        <span className="text-sky-500">Sangwoo Youn</span>*,{' '}
+        <a href="https://phillipinseoul.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Phillip Y. Lee</a>,{' '}
+        <a href="https://mhsung.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Minhyuk Sung</a>
       </div>
       <div className="text-slate-600 text-lg mb-2 font-medium">
         KAIST

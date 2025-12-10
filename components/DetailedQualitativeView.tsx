@@ -15,7 +15,7 @@ export const DetailedQualitativeView: React.FC = () => {
               Back to Project Page
             </Button>
           </Link>
-          <h2 className="text-lg font-bold text-slate-900 hidden md:block">
+          <h2 className="text-lg font-bold text-slate-900 hidden md:block font-google-sans">
             Extended Qualitative Results
           </h2>
           <div className="w-24"></div> {/* Spacer for centering */}
@@ -27,9 +27,9 @@ export const DetailedQualitativeView: React.FC = () => {
         {/* Section 1: Comparison Strip */}
         <section>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Comparison with Baselines</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 font-google-sans">Comparison with Baselines</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Visualizing how our AVS framework (right) compares to EQA baselines and supervised-only methods (middle) in recovering visual information.
+              Visual comparison of our AVS framework (right) with other baselines.
             </p>
           </div>
 
@@ -53,9 +53,9 @@ export const DetailedQualitativeView: React.FC = () => {
         {/* Section 2: EQA Pipeline Integration */}
         <section>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Integration into EQA Pipeline</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 font-google-sans">Integration into EQA Pipeline</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Demonstrating how our active view selection module acts as a "plug-and-play" refinement step at the end of a standard EQA exploration trajectory.
+              Demonstration of our active view selection module as a "plug-and-play" refinement step at the end of a standard EQA exploration trajectory.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export const DetailedQualitativeView: React.FC = () => {
               caption={
                 <span>
                   <strong>Figure 6.</strong> Illustration of integrating our AVS framework into an EQA pipeline.
-                  The yellow line represents the initial exploration where sufficient information is not available for agent to answer the question. The <span className="text-blue-600">blue arrow</span> represents the final viewpoint refinement by our model.
+                  The yellow line represents the the initial exploration performed by the EQA pipeline, during which the agent does not yet have enough visual information to answer the question. The <span className="text-blue-600">blue arrow</span> represents the final viewpoint refinement by our model.
                   Standard EQA (Fine-EQA) often stops with the target partially occluded; our model minimally adjusts to reveal it.
                 </span>
               }

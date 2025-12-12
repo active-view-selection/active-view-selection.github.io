@@ -13,23 +13,25 @@ import { CHART_DATA_PROCTHOR, CHART_DATA_HM3D } from '../constants';
 
 export const HomePage: React.FC = () => {
     return (
-        <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-100 selection:text-blue-900">
+        <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-100 selection:text-blue-900 font-light">
 
             <Header />
 
             <main className="container mx-auto px-4 pb-20 space-y-16">
 
-                {/* Teaser Image */}
-                <div className="max-w-5xl mx-auto">
-                    <img
-                        src="./figures/teaser.png"
-                        alt="Teaser"
-                        className="w-full h-auto"
-                    />
-                </div>
+                <div className="space-y-4">
+                    {/* Teaser Image */}
+                    <div className="max-w-5xl mx-auto">
+                        <img
+                            src="./figures/teaser.png"
+                            alt="Teaser"
+                            className="w-full h-auto"
+                        />
+                    </div>
 
-                {/* TLDR Section */}
-                <TLDR />
+                    {/* TLDR Section */}
+                    <TLDR />
+                </div>
 
                 {/* Teaser Video/Image Placeholder - Kept existing video placeholder if intended to stay */}
                 <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100 aspect-video relative group cursor-pointer">
@@ -67,7 +69,7 @@ export const HomePage: React.FC = () => {
                                 className="px-8 py-4 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
                                 icon={<Icons.Eye />}
                             >
-                                <span className="ml-2">View More Qualitative Comparisons</span>
+                                <span className="ml-2">More Qualitative Comparisons</span>
                             </Button>
                         </Link>
                     </div>
@@ -101,7 +103,7 @@ export const HomePage: React.FC = () => {
                 {/* Methodology */}
                 <Method />
 
-                {/* <BibTeX /> */}
+                <BibTeX />
 
             </main>
 

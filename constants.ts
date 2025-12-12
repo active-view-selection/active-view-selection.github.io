@@ -1,18 +1,18 @@
 import { QualitativeExample, TableRow } from './types';
 
 export const PAPER_TITLE = "Toward Ambulatory Vision: Learning Visually-Grounded Active View Selection";
-export const CONFERENCE = "CVPR 2026 Submission #91";
+export const CONFERENCE = "CVPR";
 
-export const TLDR_TEXT = "We introduce Visually Grounded Active View Selection (VG-AVS) Framework, enabling embodied agents to actively adjust their viewpoint for better Visual Question Answering using only current visual cues, achieving state-of-the-art performance on synthetic and real-world benchmarks.";
+export const TLDR_TEXT = "We present the Visually-Grounded Active View Selection (VG-AVS) framework, turning static VLM perception into active view selection: when the current view is insufficient, the agent moves to a more informative viewpoint for better Visual Question Answering.";
 
 export const ABSTRACT_TEXT = `
 Vision Language Models (VLMs) excel at visual question answering (VQA) but remain limited to snapshot vision, reasoning from static images. In contrast, embodied agents require ambulatory vision, actively moving to obtain more informative views. We introduce Visually Grounded Active View Selection (VG-AVS), a task that selects the most informative next viewpoint using only the visual information in the current image, without relying on scene memory or external knowledge. To support this task, we construct a synthetic dataset with automatically generated paired query–target views and question–answer prompts. We also propose a framework that fine-tunes pretrained VLMs through supervised fine-tuning (SFT) followed by RL-based policy optimization. Our approach achieves strong question answering performance based on viewpoint selection and generalizes robustly to unseen synthetic and real scenes. Furthermore, incorporating our learned VG-AVS framework into existing scene-exploration-based EQA systems improves downstream question-answering accuracy.
 `;
 
-export const BIBTEX = `@article{anonymous2026ambulatory,
+export const BIBTEX = `@article{Koo2026ambulatory,
   title={Toward Ambulatory Vision: Learning Visually-Grounded Active View Selection},
-  author={Anonymous Authors},
-  journal={CVPR Submission},
+  author = {Koo, Juil and Choi, Daehyeon and Youn, Sangwoo and Lee, Phillip Y. and Sung, Minhyuk},
+  journal={Arxiv Preprint},
   year={2026}
 }`;
 
@@ -39,23 +39,14 @@ export const CHART_DATA_HM3D = [
 ];
 
 export const MAIN_RESULTS_DATA: TableRow[] = [
-  {
-    model: 'No Action (Query view)',
-    procthor: { exist: 49.22, count: 16.36, state: 61.57, avg: 42.38 },
-    hm3d: { exist: 67.50, count: 56.15, state: 54.59, attr: 66.67, obj: 48.33, avg: 58.65 }
-  },
-  {
-    model: 'No Action (Target view)',
-    procthor: { exist: 93.02, count: 69.14, state: 92.58, avg: 84.91 },
-    hm3d: { exist: 86.67, count: 77.50, state: 80.00, attr: 74.48, obj: 71.79, avg: 78.09 }
-  },
+
   {
     model: 'Qwen2.5-VL-7B (Backbone)',
     procthor: { exist: 64.34, count: 29.74, state: 56.55, avg: 50.21 },
     hm3d: { exist: 66.25, count: 46.15, state: 66.49, attr: 49.17, obj: 46.86, avg: 54.98 }
   },
   {
-    model: 'ViLaSR (Spatial VLM)',
+    model: 'ViLaSR',
     procthor: { exist: 57.95, count: 25.46, state: 52.84, avg: 45.42 },
     hm3d: { exist: 68.33, count: 48.46, state: 52.70, attr: 50.00, obj: 50.00, avg: 53.90 }
   },

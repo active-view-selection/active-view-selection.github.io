@@ -39,11 +39,23 @@ export const DetailedQualitativeView: React.FC = () => {
               alt="Qualitative Comparison Strip"
               caption={
                 <span>
-                  <strong>Figure 4.</strong> Qualitative results in AVS-ProcTHOR (top) and AVS-HM3D (bottom).
-                  <span className="text-blue-600 font-semibold"> Blue</span> denotes the object of interest.
+                  Qualitative results in AVS-ProcTHOR (top) and AVS-HM3D (bottom).
+                  <span className="bg-blue-100 text-blue-800 px-1 rounded">Blue</span> and <span className="bg-yellow-100 text-yellow-800 px-1 rounded">yellow</span> mark the object of interest and surrounding cue objects.
                   <span className="text-green-600 font-bold"> ✓</span> corresponds to correct answers,
                   <span className="text-red-600 font-bold"> ✗</span> to wrong answers.
                   Our method consistently finds views that answer the question correctly.
+                </span>
+              }
+            />
+          </div>
+
+          <div className="bg-white p-4 rounded-2xl shadow-lg border border-slate-200 mt-8">
+            <Figure
+              src="figures/qualitative2.png"
+              alt="Qualitative Comparison Strip Detailed"
+              caption={
+                <span>
+                  More qualitative results on AVS-ProcTHOR (top four rows) and AVS-HM3D (bottom four rows). <span className="bg-blue-100 text-blue-800 px-1 rounded">Blue</span> and <span className="bg-slate-200 text-slate-800 px-1 rounded">gray</span> mark the object of interest and surrounding cue objects, respectively. <span className="text-green-600 font-bold">✓</span> denotes correct answers (LLM-Match = 5), <span className="text-red-600 font-bold">✗</span> incorrect ones (LLM-Match ≤ 2).
                 </span>
               }
             />
@@ -65,7 +77,7 @@ export const DetailedQualitativeView: React.FC = () => {
               alt="EQA Integration"
               caption={
                 <span>
-                  <strong>Figure 6.</strong> Illustration of integrating our AVS framework into an EQA pipeline.
+                  Illustration of integrating our AVS framework into an EQA pipeline.
                   The yellow line represents the the initial exploration performed by the EQA pipeline, during which the agent does not yet have enough visual information to answer the question. The <span className="text-blue-600">blue arrow</span> represents the final viewpoint refinement by our model.
                   Standard EQA (Fine-EQA) often stops with the target partially occluded; our model minimally adjusts to reveal it.
                 </span>

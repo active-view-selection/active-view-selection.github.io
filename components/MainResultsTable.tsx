@@ -18,20 +18,17 @@ export const MainResultsTable: React.FC = () => {
             </th>
           </tr>
           <tr className="border-b border-slate-200">
-            <th className="px-6 py-2 border-r border-slate-200"></th>
-            {/* ProcTHOR Columns */}
-            <th className="px-3 py-2 text-center bg-blue-50/30">Exist</th>
-            <th className="px-3 py-2 text-center bg-blue-50/30">Count</th>
-            <th className="px-3 py-2 text-center bg-blue-50/30">State</th>
-            <th className="px-3 py-2 text-center font-semibold bg-blue-50/30">Avg</th>
-
-            {/* HM3D Columns */}
-            <th className="px-3 py-2 text-center bg-green-50/30 border-l border-slate-200">Exist</th>
-            <th className="px-3 py-2 text-center bg-green-50/30">Count</th>
-            <th className="px-3 py-2 text-center bg-green-50/30">State</th>
-            <th className="px-3 py-2 text-center bg-green-50/30">Attr</th>
-            <th className="px-3 py-2 text-center bg-green-50/30">Obj</th>
-            <th className="px-3 py-2 text-center font-semibold bg-green-50/30">Avg</th>
+            <th className="py-3 px-4 text-left font-light text-slate-600 border-b border-slate-200">Model</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Exist</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Count</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">State</th>
+            <th className="py-3 px-4 text-center font-semibold text-slate-900 border-b border-slate-200 bg-slate-50/50">Avg</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200 border-l border-slate-100">Exist</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Count</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">State</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Attr</th>
+            <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Obj</th>
+            <th className="py-3 px-4 text-center font-semibold text-slate-900 border-b border-slate-200 bg-slate-50/50">Avg</th>
           </tr>
         </thead>
         <tbody>

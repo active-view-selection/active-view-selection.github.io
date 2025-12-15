@@ -13,10 +13,9 @@ export const MainResultsTable: React.FC = () => {
             <th scope="col" colSpan={4} className="px-6 py-4 text-center font-bold border-r border-slate-200 bg-blue-50/50 text-blue-900 font-google-sans">
               AVS-ProcTHOR (Synthetic)
             </th>
-            <th scope="col" colSpan={6} className="px-6 py-4 text-center font-bold bg-green-50/50 text-green-900 font-google-sans">
+            <th scope="col" colSpan={6} className="px-6 py-4 text-center font-bold bg-blue-50/50 text-blue-900 font-google-sans">
               AVS-HM3D (Real)
-            </th>
-          </tr>
+            </th>          </tr>
           <tr className="border-b border-slate-200">
             <th className="py-3 px-4 text-left font-light text-slate-600 border-b border-slate-200">Model</th>
             <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Exist</th>
@@ -40,7 +39,6 @@ export const MainResultsTable: React.FC = () => {
             >
               <td className="px-6 py-4 font-medium text-slate-900 border-r border-slate-200 whitespace-nowrap">
                 {row.model}
-                {row.highlight && <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">Ours</span>}
               </td>
 
               {/* ProcTHOR Data */}
@@ -52,12 +50,12 @@ export const MainResultsTable: React.FC = () => {
               </td>
 
               {/* HM3D Data */}
-              <td className="px-3 py-4 text-center border-l border-slate-200 bg-green-50/10">{row.hm3d.exist.toFixed(2)}</td>
-              <td className="px-3 py-4 text-center bg-green-50/10">{row.hm3d.count.toFixed(2)}</td>
-              <td className="px-3 py-4 text-center bg-green-50/10">{row.hm3d.state.toFixed(2)}</td>
-              <td className="px-3 py-4 text-center bg-green-50/10">{row.hm3d.attr.toFixed(2)}</td>
-              <td className="px-3 py-4 text-center bg-green-50/10">{row.hm3d.obj.toFixed(2)}</td>
-              <td className={`px-3 py-4 text-center bg-green-50/10 ${row.highlight ? 'font-bold text-green-700' : ''}`}>
+              <td className="px-3 py-4 text-center border-l border-slate-200 bg-blue-50/10">{row.hm3d.exist.toFixed(2)}</td>
+              <td className="px-3 py-4 text-center bg-blue-50/10">{row.hm3d.count.toFixed(2)}</td>
+              <td className="px-3 py-4 text-center bg-blue-50/10">{row.hm3d.state.toFixed(2)}</td>
+              <td className="px-3 py-4 text-center bg-blue-50/10">{row.hm3d.attr.toFixed(2)}</td>
+              <td className="px-3 py-4 text-center bg-blue-50/10">{row.hm3d.obj.toFixed(2)}</td>
+              <td className={`px-3 py-4 text-center bg-blue-50/10 ${row.highlight ? 'font-bold text-blue-700' : ''}`}>
                 {row.hm3d.avg.toFixed(2)}
               </td>
             </tr>

@@ -27,7 +27,25 @@ export const ResultsChart: React.FC<ResultsChartProps> = ({ data, title }) => {
               angle={-45}
               textAnchor="end"
               height={100}
-              tick={{ fontSize: 11, fill: '#475569', fontFamily: 'Noto Sans, sans-serif' }}
+              tick={({ x, y, payload }) => (
+                <g transform={`translate(${x},${y})`}>
+                  <text
+                    x={0}
+                    y={0}
+                    dy={16}
+                    textAnchor="end"
+                    fill="#475569"
+                    transform="rotate(-45)"
+                    style={{
+                      fontSize: 11,
+                      fontFamily: 'Noto Sans, sans-serif',
+                      fontWeight: payload.value.includes('Ours') ? 700 : 400,
+                    }}
+                  >
+                    {payload.value}
+                  </text>
+                </g>
+              )}
               interval={0}
             />
             <YAxis
@@ -41,7 +59,10 @@ export const ResultsChart: React.FC<ResultsChartProps> = ({ data, title }) => {
             />
             <Bar dataKey="score" radius={[4, 4, 0, 0]}>
               {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.fill} />
+                <Cell
+                  key={`cell-${index}`}
+                  fill={entry.name.includes('Ours') ? '#3b82f6' : '#94a3b8'}
+                />
               ))}
             </Bar>
           </BarChart>

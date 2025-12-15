@@ -66,7 +66,7 @@ export const QualitativeGallery: React.FC<QualitativeGalleryProps> = ({ dataset 
       {/* Gallery Header */}
       <div className={`p-4 border-b border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 bg-${datasetColor}-50/30`}>
         <div className="flex items-center gap-3">
-          <div className="text-lg text-slate-700 font-light">{datasetLabel}</div>
+          <div className="text-lg text-slate-700 font-bold">{datasetLabel}</div>
         </div>
 
         {/* Category Tabs */}

@@ -33,18 +33,23 @@ export const HomePage: React.FC = () => {
                     <TLDR />
                 </div>
 
-                {/* Teaser Video/Image Placeholder - Kept existing video placeholder if intended to stay */}
-                <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100 aspect-video relative group cursor-pointer">
-                    <video
-                        controls
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                        src="avs_suppl_video.mp4"
-                    />
-                </div>
+                {/* Demo Video Section */}
+                <section className="max-w-5xl mx-auto">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl font-bold text-slate-900 font-google-sans">Demo Video</h2>
+                    </div>
+                    <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100 aspect-video relative group cursor-pointer">
+                        <video
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover"
+                            src="avs_suppl_video.mp4"
+                        />
+                    </div>
+                </section>
 
                 {/* Qualitative Examples Section (Moved Up) */}
                 <section className="max-w-5xl mx-auto">
@@ -88,10 +93,10 @@ export const HomePage: React.FC = () => {
 
                     <div className="grid lg:grid-cols-2 gap-8 mb-2">
                         <div className="flex flex-col h-[500px]">
-                            <ResultsChart data={CHART_DATA_PROCTHOR} title="AVS-ProcTHOR (Synthetic)" />
+                            <ResultsChart data={CHART_DATA_PROCTHOR} title="Synthetic Scenes (ProcTHOR)" />
                         </div>
                         <div className="flex flex-col h-[500px]">
-                            <ResultsChart data={CHART_DATA_HM3D} title="AVS-HM3D (Real-World)" />
+                            <ResultsChart data={CHART_DATA_HM3D} title="Real-World Scenes (Habitat Matterport)" />
                         </div>
                     </div>
 

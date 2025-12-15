@@ -18,11 +18,11 @@ export const Method: React.FC = () => {
             <p className="text-slate-700 mb-4 font-light">
               We define a continuous action space consisting of:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-slate-700 font-light">
+            <ol className="list-decimal list-inside space-y-2 text-slate-700 font-light">
               <li><strong>Heading Rotation (φ<sup>h</sup>):</strong> Azimuthal turn relative to current orientation.</li>
               <li><strong>Forward Translation (d):</strong> Distance to move forward.</li>
               <li><strong>View Rotation (φ<sup>v</sup>):</strong> Final head turn to center the object of interest.</li>
-            </ul>
+            </ol>
           </div>
           <div className="flex justify-center">
             <img
@@ -43,13 +43,13 @@ export const Method: React.FC = () => {
             <div className="">
               <strong className="text-slate-900 block mb-2">1. Supervised Fine-Tuning (SFT)</strong>
               <p className="text-slate-600 font-light">
-                Initializes the model using ground-truth actions derived from our synthetic dataset, providing a strong starting point for navigation.
+                Initializes the model using ground-truth actions derived from our synthetic dataset, providing a strong starting point for action planning.
               </p>
             </div>
             <div className="">
               <strong className="text-slate-900 block mb-2">2. Reinforcement Learning (RL)</strong>
               <p className="text-slate-600 font-light">
-                Further refines the policy using a verifier-based reward, allowing the model to generalize beyond the training distribution and handle unseen environments.
+                Further refines the policy using a verifier-based reward, enabling the model to improve beyond the training dataset by exploring actions that yield higher reward.
               </p>
             </div>
           </div>

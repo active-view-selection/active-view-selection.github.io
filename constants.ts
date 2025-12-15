@@ -9,7 +9,7 @@ export const ABSTRACT_TEXT = `
 Vision Language Models (VLMs) excel at visual question answering (VQA) but remain limited to snapshot vision, reasoning from static images. In contrast, embodied agents require ambulatory vision, actively moving to obtain more informative views. We introduce Visually Grounded Active View Selection (VG-AVS), a task that selects the most informative next viewpoint using only the visual information in the current image, without relying on scene memory or external knowledge. To support this task, we construct a synthetic dataset with automatically generated paired query–target views and question–answer prompts. We also propose a framework that fine-tunes pretrained VLMs through supervised fine-tuning (SFT) followed by RL-based policy optimization. Our approach achieves strong question answering performance based on viewpoint selection and generalizes robustly to unseen synthetic and real scenes. Furthermore, incorporating our learned VG-AVS framework into existing scene-exploration-based EQA systems improves downstream question-answering accuracy.
 `;
 
-export const BIBTEX = `@article{Koo2026ambulatory,
+export const BIBTEX = `@article{Koo:2026ambulatory,
   title={Toward Ambulatory Vision: Learning Visually-Grounded Active View Selection},
   author = {Koo, Juil and Choi, Daehyeon and Youn, Sangwoo and Lee, Phillip Y. and Sung, Minhyuk},
   journal={Arxiv Preprint},

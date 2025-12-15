@@ -10,14 +10,14 @@ export const MainResultsTable: React.FC = () => {
             <th scope="col" className="px-6 py-4 font-bold border-r border-slate-200 font-google-sans">
               Action Model
             </th>
-            <th scope="col" colSpan={4} className="px-6 py-4 text-center font-bold border-r border-slate-200 bg-blue-50/50 text-blue-900 font-google-sans">
+            <th scope="col" colSpan={4} className="px-6 py-4 text-center font-bold border-r border-slate-200 bg-slate-50 text-slate-700 font-google-sans">
               AVS-ProcTHOR (Synthetic)
             </th>
-            <th scope="col" colSpan={6} className="px-6 py-4 text-center font-bold bg-blue-50/50 text-blue-900 font-google-sans">
+            <th scope="col" colSpan={6} className="px-6 py-4 text-center font-bold bg-slate-50 text-slate-700 font-google-sans">
               AVS-HM3D (Real)
             </th>          </tr>
           <tr className="border-b border-slate-200">
-            <th className="py-3 px-4 text-left font-light text-slate-600 border-b border-slate-200">Model</th>
+            <th className="py-3 px-4 text-left font-light text-slate-600 border-b border-r border-slate-200"></th>
             <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Exist</th>
             <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">Count</th>
             <th className="py-3 px-4 text-center font-light text-slate-600 border-b border-slate-200">State</th>

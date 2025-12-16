@@ -45,7 +45,13 @@ export const Header: React.FC = () => {
         >
           Paper
         </Button>
-        <Button variant="secondary" icon={<Icons.Arxiv />} hoverText="Coming soon">
+        <Button
+          variant="secondary"
+          icon={<Icons.Arxiv />}
+          href="https://arxiv.org/abs/2512.13250"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Arxiv
         </Button>
         <Button

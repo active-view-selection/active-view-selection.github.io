@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
       <div className="text-lg mb-2">
         <a href="https://63days.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Juil Koo</a>*,{' '}
         <a href="https://choidaedae.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Daehyeon Choi</a>*,{' '}
-        <span className="text-sky-500">Sangwoo Youn</span>*,{' '}
+        <a href="https://sang-w00.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Sangwoo Youn</a>*,{' '}
         <a href="https://phillipinseoul.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Phillip Y. Lee</a>,{' '}
         <a href="https://mhsung.github.io" target="_blank" rel="noopener noreferrer" className="text-sky-500 hover:text-sky-600 transition-colors">Minhyuk Sung</a>
       </div>

@@ -63,7 +63,13 @@ export const Header: React.FC = () => {
         >
           Code
         </Button>
-        <Button variant="secondary" icon={<Icons.Data />} hoverText="Coming soon">
+        <Button
+          variant="secondary"
+          icon={<Icons.Data />}
+          href="https://huggingface.co/datasets/daehyeonchoi/VGAVS-Dataset"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Dataset
         </Button>
         <Button
